@@ -1,7 +1,7 @@
 import os
 import csv
 # 'Append file directory and make a complete file path'
-filepath ='budget_data.csv'
+filepath =os.path.join('resources','budget_data.csv')
 # initialize variables and create lists
 months=[]
 profit_loss_changes =[]
@@ -46,9 +46,10 @@ print(f"Average change:{average_profit_loss}")
 print(f"Greatest Increase in profits: {best_month} (${highest_change})")
 print(f"Greatest Decrease in profits: {worst_month} (${lowest_change})")
 
-budget_file = "budget_data.txt"
+# budget_file = ("budget_data.txt")
+budget_file =os.path.join("output",'budget_data.txt')
 with open(budget_file, "w") as outfile:
-    
+
     outfile.write("Financial Analysis\n")
     outfile.write("----------------------------\n")
     outfile.write(f"Total Months:  {count_months}\n")
