@@ -46,5 +46,14 @@ print(f"Average change:{average_profit_loss}")
 print(f"Greatest Increase in profits: {best_month} (${highest_change})")
 print(f"Greatest Decrease in profits: {worst_month} (${lowest_change})")
 
-   
+budget_file = "budget_data.txt"
+with open(budget_file, "w") as outfile:
+    
+    outfile.write("Financial Analysis\n")
+    outfile.write("----------------------------\n")
+    outfile.write(f"Total Months:  {count_months}\n")
+    outfile.write(f"Total:  ${net_profit_loss}\n")
+    outfile.write(f"Average Change:  ${average_profit_loss}\n")
+    outfile.write(f"Greatest Increase in Profits:  {best_month} (${highest_change})\n")
+    outfile.write(f"Greatest Decrease in Losses:  {worst_month} (${lowest_change})\n")
     
